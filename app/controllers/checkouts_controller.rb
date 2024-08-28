@@ -1,6 +1,6 @@
 class CheckoutsController < ApplicationController
   def create
-    Stripe.api_key = "sk_test_51PqxkEFMJ2ksmp7eugS2wgabg00GryweMrnYxUJOFlYWqZv7D1qwl7vchHFwhZbTYpp23uz8rlu1sl8KjCcgsmuC00TtFR25OL"
+    Stripe.api_key = "pk_test_51PqxkEFMJ2ksmp7eV169pSI5htndFuyi4HashteLWIUBsHbWgsnos5V9KZ27AQ4fwp4gnoBDDXajMXTMOGe9wPGn00NFcOtpuD"
     cart = params[:cart]
     line_items = cart.map do |item|
       product = Product.find(item["id"])
